@@ -16,14 +16,13 @@
     font-family: Trebuchet MS;
     font-weight: bold;
     font-size:2.25em;
-    margin-left:20px;
   }
 
   .steam-window-content > h5 {
     
     color: #d8ded3;
     font-family: Trebuchet MS;
-    margin-left:20px;
+    
     font-size:1em;
     font-weight: bold;
   }
@@ -32,7 +31,7 @@
     color:#C4AC49;
     font-family: Trebuchet MS;
     font-weight: bold;
-    margin-left:20px;
+    
     font-size:1.75em;
   }
   .steam-window-content a {
@@ -48,9 +47,9 @@
     margin: 12px 12px 12px 0px;
     color: #d8ded3;
     font-family: Trebuchet MS;
-    margin-left:20px;
   }
   .steam-window-content{
+    padding:20px;
     display:flex;
     flex-direction: column;
   }

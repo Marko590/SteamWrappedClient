@@ -1,0 +1,26 @@
+.steam-button{
+    
+    display: inline-block;
+    width: fit-content;
+    height: auto;
+    background-color: #4C5844;
+    font-family: Trebuchet MS;
+    border-top-color: #88917F;
+    border-left-color: #88917F;
+    border-style: solid;
+    border-width: 1px;
+    justify-content: center;
+    align-items: end;
+    color: white;
+
+}
+
+.steam-button:active{
+    border-top-color: black;
+    border-left-color: black;
+    border-right-color: #88917F;
+    border-bottom-color: #88917F;
+    border-style: solid;
+    border-width: 1px;
+    
+}
