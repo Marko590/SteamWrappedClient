@@ -35,6 +35,20 @@
     justify-content: center;
     align-items: center;
   }
+  .steam-button-taskbar:active {
+    width: 25px;
+    height: 25px;
+    background-color: #4C5844;
+    color: #88917F;
+    border-top-color: black;
+    border-left-color: black;
+    border-right-color: #88917F;
+    border-bottom-color: #88917F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .steam-window-taskbar {
     display: flex;
     justify-content: space-between;

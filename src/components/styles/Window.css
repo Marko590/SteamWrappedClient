@@ -9,7 +9,6 @@
     margin: 10px;
     padding: 10px;
   }
-  
 
   .steam-window-content > h1 {
     color:#C4AC49;
@@ -19,10 +18,8 @@
   }
 
   .steam-window-content > h5 {
-    
     color: #d8ded3;
     font-family: Trebuchet MS;
-    
     font-size:1em;
     font-weight: bold;
   }
@@ -31,7 +28,6 @@
     color:#C4AC49;
     font-family: Trebuchet MS;
     font-weight: bold;
-    
     font-size:1.75em;
   }
   .steam-window-content a {

@@ -9,3 +9,10 @@
     color: inherit;
     
   }
+
+  input{
+    background: #3e4637;
+    outline: none;
+    border-right-color: #88917F;
+    border-bottom-color: #88917F;
+  }

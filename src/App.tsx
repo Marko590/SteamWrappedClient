@@ -33,10 +33,8 @@ function App() {
         <h5>Heading</h5>
         <Button text="Appear" onClicked={() => setWindowVisibility(true)} />
         <Button text="Dissapear" onClicked={() => setWindowVisibility(false)} />
-        <InsetBox>
-          <input />
-        </InsetBox>
 
+        <input />
         <hr></hr>
         <p>
           Here is a <a href="https://google.com">link example</a>
