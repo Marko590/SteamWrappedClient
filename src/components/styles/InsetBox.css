@@ -1,0 +1,34 @@
+.steam-inset-box{
+    background-color: #3e4637;
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+    border-width: 0.5px;
+    border-top-color:black;
+    border-left-color:black;
+    border-bottom-color: #88917F;
+    border-right-color: #88917F;
+    border-style: solid;
+    margin-top: 20px;
+}
+
+.steam-inset-box > .steam-inset-box{
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+    border-width: 0.5px;
+    border-top-color:black;
+    border-left-color:black;
+    border-bottom-color: #88917F;
+    border-right-color: #88917F;
+    border-style: solid;
+}
+
+.steam-inset-box>p{
+    font-size: 14px;
+    
+    color: #d8ded3;
+    font-family: Trebuchet MS;
+    
+  }

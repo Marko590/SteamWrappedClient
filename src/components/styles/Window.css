@@ -1,0 +1,56 @@
+.steam-window {
+    background-color: #4C5844;
+    display: flex;
+    border-style: solid;
+    border-width: 0.5px;
+    flex-direction: column;
+    border-top-color: #88917F;
+    border-left-color: #88917F;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+
+  .steam-window-content > h1 {
+    color:#C4AC49;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    font-size:2.25em;
+    margin-left:20px;
+  }
+
+  .steam-window-content > h5 {
+    
+    color: #d8ded3;
+    font-family: Trebuchet MS;
+    margin-left:20px;
+    font-size:1em;
+    font-weight: bold;
+  }
+
+  .steam-window-content > h2 {
+    color:#C4AC49;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    margin-left:20px;
+    font-size:1.75em;
+  }
+  .steam-window-content a {
+    color :#aaaaaa;
+  }
+
+  .steam-window-content a:hover {
+    color :#C4AC49;
+  }
+
+  .steam-window-content>p{
+    font-size: 14px;
+    margin: 12px 12px 12px 0px;
+    color: #d8ded3;
+    font-family: Trebuchet MS;
+    margin-left:20px;
+  }
+  .steam-window-content{
+    display:flex;
+    flex-direction: column;
+  }

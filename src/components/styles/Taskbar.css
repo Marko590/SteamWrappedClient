@@ -1,0 +1,45 @@
+.steam-window-title > p {
+    color: white;
+    font-family: "Trebuchet MS", "Verdana", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  .steam-button-container {
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .steam-window-title {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  .steam-title-logo {
+    margin-right: 10px;
+    margin-top: 2px;
+  }
+  
+  .steam-button-taskbar {
+    width: 25px;
+    height: 25px;
+    background-color: #4C5844;
+    color: #88917F;
+    border-top-color: #88917F;
+    border-left-color: #88917F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .steam-window-taskbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    padding-bottom:0;
+    width: 100%;
+  }
