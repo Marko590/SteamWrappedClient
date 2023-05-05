@@ -3,6 +3,7 @@ import "./App.css";
 import Window from "./components/Window";
 import InsetBox from "./components/InsetBox";
 import Button from "./components/Button";
+import CheckBox from "./components/CheckBox";
 
 function App() {
   const [windowVisible, setWindowVisibility] = useState(true);
@@ -39,6 +40,7 @@ function App() {
         <p>
           Here is a <a href="https://google.com">link example</a>
         </p>
+        <CheckBox title="asdf" />
       </Window>
     </div>
   );

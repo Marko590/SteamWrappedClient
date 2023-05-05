@@ -4,8 +4,10 @@
     height: auto;
     background-color: #4C5844;
     font-family: Trebuchet MS;
-    border-top-color: #88917F;
-    border-left-color: #88917F;
+    border-top: solid 1px #899281;
+    border-bottom:solid 1px #292d23;
+    border-left:  solid 1px #899281;
+    border-right: solid 1px #292d23;
     border-style: solid;
     border-width: 1px;
     justify-content: center;
@@ -14,10 +16,11 @@
 }
 
 .steam-button:active{
-    border-top-color: black;
-    border-left-color: black;
-    border-right-color: #88917F;
-    border-bottom-color: #88917F;
+    
+    border-left: solid 1px #292d23;
+    border-top: solid 1px #292d23;
+    border-bottom: solid 1px #899281;
+    border-right: solid 1px #899281;
     border-style: solid;
     border-width: 1px;
 }
