@@ -10,9 +10,18 @@
     
   }
 
-  input{
-    background: #3e4637;
-    outline: none;
-    border-right-color: #88917F;
-    border-bottom-color: #88917F;
+  
+  *::selection{
+    background-color: #9b8f41;
+  }
+
+  *:focus{
+    outline: dashed;
+    outline-offset: -5px;
+    outline-color:#292D23;
+    outline-width: 1.5px;
+  }
+
+  a:focus{
+    outline:none improtant!;
   }

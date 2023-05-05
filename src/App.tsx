@@ -4,6 +4,7 @@ import Window from "./components/Window";
 import InsetBox from "./components/InsetBox";
 import Button from "./components/Button";
 import CheckBox from "./components/CheckBox";
+import SteamInput from "./components/SteamInput";
 
 function App() {
   const [windowVisible, setWindowVisibility] = useState(true);
@@ -35,11 +36,19 @@ function App() {
         <Button text="Appear" onClicked={() => setWindowVisibility(true)} />
         <Button text="Dissapear" onClicked={() => setWindowVisibility(false)} />
 
-        <input />
+        <SteamInput type="text" text="a" />
+        <SteamInput type="email" text="a" />
+        <SteamInput type="password" text="a" />
+        <SteamInput type="number" text="a" />
+        <SteamInput type="file" text="a" />
+        <SteamInput type="range" text="a" />
+
         <hr></hr>
-        <p>
-          Here is a <a href="https://google.com">link example</a>
-        </p>
+        <InsetBox>
+          <p>
+            Here is a <a href="https://google.com">link example</a>
+          </p>
+        </InsetBox>
         <CheckBox title="asdf" />
       </Window>
     </div>
