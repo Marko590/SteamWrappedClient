@@ -41,8 +41,7 @@ function App() {
         <SteamInput type="password" text="a" />
         <SteamInput type="number" text="a" />
         <SteamInput type="file" text="a" />
-        <SteamInput type="range" text="a" />
-
+        <SteamInput type="range" text="a" min={0} max={10} />
         <hr></hr>
         <InsetBox>
           <p>

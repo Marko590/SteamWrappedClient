@@ -3,10 +3,12 @@ import "./styles/SteamInput.css";
 interface Props {
   type: string;
   text: string;
+  min?: number;
+  max?: number;
 }
 
-function SteamInput({ type }: Props) {
-  return <input className="text" type={type} min={10} max={21} />;
+function SteamInput({ type, min, max }: Props) {
+  return <input className="text" type={type} min={min} max={max} />;
 }
 
 export default SteamInput;

@@ -7,7 +7,6 @@
     background: #3e4637;
     padding: 3px;
     color: inherit;
-    
   }
 
   
@@ -25,3 +24,13 @@
   a:focus{
     outline:none improtant!;
   }
+
+  select, textarea {
+    width:fit-content;
+    border-left: solid 1px #292d23;
+    border-top: solid 1px #292d23;
+    border-bottom: solid 1px #899281;
+    border-right: solid 1px #899281;
+    color: #d8ded3;
+    background: #3e4637;
+}
