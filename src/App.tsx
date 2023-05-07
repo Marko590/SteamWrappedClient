@@ -1,13 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Window from "./components/Window";
 import InsetBox from "./components/InsetBox";
 import Button from "./components/Button";
 import CheckBox from "./components/CheckBox";
 import SteamInput from "./components/SteamInput";
+import axios from "axios";
+import React from "react";
+
+interface User {
+  userName: string;
+  realName: string;
+  lastLoggedOf: Date;
+  avatarUrl: string;
+  status: number;
+  playerLevel: number;
+}
 
 function App() {
   const [windowVisible, setWindowVisibility] = useState(true);
+  const [user, setUser] = useState<User>();
+  useEffect(() => {
+    axios
+      .get("https://localhost:7209/SteamStats?steamId=76561198048469138")
+      .then((response) => {
+        setUser(response.data);
+      });
+  }, []);
+
   return (
     <div className="steam-background">
       {windowVisible && (
@@ -24,32 +44,9 @@ function App() {
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <hr></hr>
-          <p>
-            Here is a <a href="https://google.com">link example</a>
-          </p>
+          <p>{user?.userName}</p>
         </Window>
       )}
-
-      <Window showTaskbar={false} title="Steam">
-        <h1>Heading</h1>
-        <h5>Heading</h5>
-        <Button text="Appear" onClicked={() => setWindowVisibility(true)} />
-        <Button text="Dissapear" onClicked={() => setWindowVisibility(false)} />
-
-        <SteamInput type="text" text="a" />
-        <SteamInput type="email" text="a" />
-        <SteamInput type="password" text="a" />
-        <SteamInput type="number" text="a" />
-        <SteamInput type="file" text="a" />
-        <SteamInput type="range" text="a" min={0} max={10} />
-        <hr></hr>
-        <InsetBox>
-          <p>
-            Here is a <a href="https://google.com">link example</a>
-          </p>
-        </InsetBox>
-        <CheckBox title="asdf" />
-      </Window>
     </div>
   );
 }
