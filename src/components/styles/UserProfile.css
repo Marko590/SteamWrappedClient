@@ -6,8 +6,8 @@
   }
   
   .imageLarge {
-    width: 150px;
-    height: 150px;
+    max-width: 150px;
+    max-height: 150px;
     border: solid 3px #999999;
     margin-right: 2rem; /* add this to create space between the image and the nameText */
   }

@@ -10,7 +10,6 @@
     color: inherit;
   }
 
-  
   *::selection{
     background-color: #9b8f41;
   }
@@ -38,30 +37,17 @@
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
-
   background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-position-y:50%;
-  
   margin-right: 2rem;
   padding-left: 0.5rem;
   padding-right: 2rem;
 }
 
 
-.imageLarge {
-  width: 150px;
-  height: 150px;
-  border: solid 3px #999999;
-  margin-right: 2rem; /* add this to create space between the image and the nameText */
-}
 
-.nameText {
-  font-size: 2.5rem;
-  color: #d8ded3;
-  flex-grow: 1; /* add this to make the paragraph expand to fill the remaining space */
-}
 .greyedOutText{
   color:#97A175;
 }
@@ -69,7 +55,7 @@ select {
 .main-div{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
 }
 
 .friends-and-games{
@@ -81,5 +67,5 @@ select {
   flex:1;
 }
 .games-window{
-  flex:1.5;
+  flex:2.25;
 }

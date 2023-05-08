@@ -10,7 +10,7 @@ interface Props {
 function Window({ title, children, showTaskbar }: Props) {
   return (
     <div className="steam-window">
-      {showTaskbar && <Taskbar title={"Title"} />}
+      {showTaskbar && <Taskbar title={title} />}
       <div className="steam-window-content">{children}</div>
     </div>
   );

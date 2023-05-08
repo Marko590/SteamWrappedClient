@@ -9,15 +9,7 @@ import axios from "axios";
 import React from "react";
 import RecentGameCard from "./components/RecentGameCard";
 import UserProfile from "./components/UserProfile";
-
-interface User {
-  userName: string;
-  realName: string;
-  lastLoggedOf: Date;
-  avatarUrl: string;
-  status: number;
-  playerLevel: number;
-}
+import FriendsCard from "./components/FriendsCard";
 
 interface RecentGame {
   appId: number;
@@ -77,7 +69,7 @@ function App() {
           >
             <div className="games-window">
               <Window showTaskbar={false}>
-                <div className="steam-recent-games">
+                <div>
                   <p className="nameText greyedOutText">Recent games</p>
                   <div className="recent-game-holder">
                     {recentGames &&
@@ -88,7 +80,11 @@ function App() {
             </div>
             <div className="friends-window">
               <Window>
-                {friends && friends.map((friend) => <p>{friend.userName}</p>)}
+                <div>
+                  <p className="nameText greyedOutText">Friends</p>
+                  {friends &&
+                    friends.map((friend) => <FriendsCard friend={friend} />)}
+                </div>
               </Window>
             </div>
           </div>
