@@ -4,7 +4,7 @@ import axios from "axios";
 import "./styles/UserProfile.css";
 
 interface Props {
-  steamId: number;
+  steamId: string;
 }
 
 interface User {
@@ -20,7 +20,7 @@ function UserProfile({ steamId }: Props) {
   const [user, setUser] = useState<User>();
   useEffect(() => {
     axios
-      .get("https://localhost:7209/SteamStats?steamId=76561198048469138")
+      .get("https://localhost:7209/SteamStats?steamId=" + steamId)
       .then((response) => {
         setUser(response.data);
       });
