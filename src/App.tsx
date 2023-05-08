@@ -35,17 +35,6 @@ interface Friend {
 function App() {
   const [windowVisible, setWindowVisibility] = useState(true);
 
-  const [friends, setFriends] = useState<Friend[]>();
-  useEffect(() => {
-    axios
-      .get(
-        "https://localhost:7209/SteamStats/friends?steamId=76561198048469138&numberOfFriends=10"
-      )
-      .then((response) => {
-        setFriends(response.data);
-      });
-  }, []);
-
   return (
     <div className="steam-background">
       {windowVisible && (
