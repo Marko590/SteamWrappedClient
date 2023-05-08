@@ -1,0 +1,43 @@
+.steam-game-card{
+    display:flex;
+    flex-direction: row;
+    
+}
+.greyedOutText{
+    
+  }  
+.steam-recent-games{
+    width:80%;
+}
+.steam-game-card > img{
+    width: fit-content;
+    height: fit-content;
+}
+
+.steam-game-left-side{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-grow:1;
+}
+
+.steam-game-left-side > p {
+    color: #d3d3d3;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.steam-game-right-side{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.steam-game-right-side > p {
+    color: #d3d3d3;
+    margin-left: 10px;
+    text-align: right;
+    margin-bottom: 5px;
+    color:#97A175;
+}

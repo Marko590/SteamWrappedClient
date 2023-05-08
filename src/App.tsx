@@ -7,6 +7,7 @@ import CheckBox from "./components/CheckBox";
 import SteamInput from "./components/SteamInput";
 import axios from "axios";
 import React from "react";
+import RecentGameCard from "./components/RecentGameCard";
 
 interface User {
   userName: string;
@@ -35,9 +36,6 @@ function App() {
       });
   }, []);
 
-  function prepareGame(game: RecentGame) {
-    return <p>{game.name}</p>;
-  }
   const [recentGames, setRecentGames] = useState<RecentGame[]>();
   useEffect(() => {
     axios
@@ -61,9 +59,10 @@ function App() {
             </div>
           </Window>
           <Window title="Steam">
-            <div>
+            <div className="steam-recent-games">
               <p className="nameText greyedOutText">Recent games</p>
-              {recentGames && recentGames.map((game) => prepareGame(game))}
+              {recentGames &&
+                recentGames.map((game) => <RecentGameCard game={game} />)}
             </div>
           </Window>
         </>

@@ -2,7 +2,7 @@
     background-color: #3e4637;
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
   }
   code{
     background: #3e4637;
@@ -65,7 +65,7 @@ select {
 }
 
 .nameText {
-  font-size: 3vw;
+  font-size: 2.5rem;
   color: #d8ded3;
   flex-grow: 1; /* add this to make the paragraph expand to fill the remaining space */
 }
@@ -74,7 +74,7 @@ select {
 }
 
 .levelText{
-  font-size: 3vw;
+  font-size: 3rem;
   flex: 0.5;
   margin-left: 50px;
   display: flex;
