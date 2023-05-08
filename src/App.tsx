@@ -17,6 +17,13 @@ interface User {
   playerLevel: number;
 }
 
+interface RecentGame {
+  appId: number;
+  allTime: number;
+  twoWeeks: number;
+  headerImage: string;
+  name: string;
+}
 function App() {
   const [windowVisible, setWindowVisibility] = useState(true);
   const [user, setUser] = useState<User>();
@@ -28,24 +35,38 @@ function App() {
       });
   }, []);
 
+  function prepareGame(game: RecentGame) {
+    return <p>{game.name}</p>;
+  }
+  const [recentGames, setRecentGames] = useState<RecentGame[]>();
+  useEffect(() => {
+    axios
+      .get("https://localhost:7209/SteamStats/recent?steamId=76561198048469138")
+      .then((response) => {
+        setRecentGames(response.data);
+      });
+  }, []);
+
   return (
     <div className="steam-background">
       {windowVisible && (
-        <Window showTaskbar={true} title="Steam">
-          <h2>Title</h2>
-          <h5>July 29,2023</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit es se cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <hr></hr>
-          <p>{user?.userName}</p>
-        </Window>
+        <>
+          <Window showTaskbar={true} title="Steam">
+            <div className="userProfile">
+              <img className="imageLarge" src={user?.avatarUrl} />
+              <p className="nameText">{user?.userName}</p>
+              <div className="levelText">
+                Level <div className="circle"> 144</div>{" "}
+              </div>
+            </div>
+          </Window>
+          <Window title="Steam">
+            <div>
+              <p className="nameText greyedOutText">Recent games</p>
+              {recentGames && recentGames.map((game) => prepareGame(game))}
+            </div>
+          </Window>
+        </>
       )}
     </div>
   );

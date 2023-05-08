@@ -2,6 +2,7 @@
     background-color: #3e4637;
     display: flex;
     flex-direction: column;
+    
   }
   code{
     background: #3e4637;
@@ -33,4 +34,60 @@
     border-right: solid 1px #899281;
     color: #d8ded3;
     background: #3e4637;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y:50%;
+  
+  margin-right: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 2rem;
+}
+
+.userProfile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 10px;
+}
+
+.imageLarge {
+  width: 150px;
+  height: 150px;
+  border: solid 3px #999999;
+  margin-right: 2rem; /* add this to create space between the image and the nameText */
+}
+
+.nameText {
+  font-size: 3vw;
+  color: #d8ded3;
+  flex-grow: 1; /* add this to make the paragraph expand to fill the remaining space */
+}
+.greyedOutText{
+  color:#97A175;
+}
+
+.levelText{
+  font-size: 3vw;
+  flex: 0.5;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  color:#d8ded3;
+  
+}
+.circle {
+  border: 2px solid white;
+  margin-left: 10px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0);
+  width:fit-content;
+  height: fit-content;
+  text-align: center;
 }
