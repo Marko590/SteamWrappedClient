@@ -91,3 +91,20 @@ select {
   height: fit-content;
   text-align: center;
 }
+
+
+.main-div{
+  display: flex;
+  flex-direction: column;
+}
+
+.friends-and-games{
+  display: flex;
+  flex-direction: row;
+}
+
+.friends-window{
+  flex:1;
+  
+}
+

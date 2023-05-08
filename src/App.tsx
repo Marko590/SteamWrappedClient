@@ -25,6 +25,18 @@ interface RecentGame {
   headerImage: string;
   name: string;
 }
+
+interface Friend {
+  userName: string;
+  avatarUrl: string;
+  steamId: number;
+  relationship: string;
+  friendsSince: Date;
+  currentGameName: string;
+  currentGameId: string;
+  status: number;
+  lastLoggedOff: Date;
+}
 function App() {
   const [windowVisible, setWindowVisibility] = useState(true);
   const [user, setUser] = useState<User>();
@@ -45,10 +57,21 @@ function App() {
       });
   }, []);
 
+  const [friends, setFriends] = useState<Friend[]>();
+  useEffect(() => {
+    axios
+      .get(
+        "https://localhost:7209/SteamStats/friends?steamId=76561198048469138&numberOfFriends=10"
+      )
+      .then((response) => {
+        setFriends(response.data);
+      });
+  }, []);
+
   return (
     <div className="steam-background">
       {windowVisible && (
-        <>
+        <div className="main-div">
           <Window showTaskbar={true} title="Steam">
             <div className="userProfile">
               <img className="imageLarge" src={user?.avatarUrl} />
@@ -58,14 +81,28 @@ function App() {
               </div>
             </div>
           </Window>
-          <Window title="Steam">
-            <div className="steam-recent-games">
-              <p className="nameText greyedOutText">Recent games</p>
-              {recentGames &&
-                recentGames.map((game) => <RecentGameCard game={game} />)}
+          <div
+            className="games-and-friends-container"
+            style={{ display: "flex", flexDirection: "row", width: "100%" }}
+          >
+            <div className="games-window">
+              <Window>
+                <div className="steam-recent-games">
+                  <p className="nameText greyedOutText">Recent games</p>
+                  <div className="recent-game-holder">
+                    {recentGames &&
+                      recentGames.map((game) => <RecentGameCard game={game} />)}
+                  </div>
+                </div>
+              </Window>
             </div>
-          </Window>
-        </>
+            <div className="friends-window">
+              <Window>
+                {friends && friends.map((friend) => <p>{friend.userName}</p>)}
+              </Window>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

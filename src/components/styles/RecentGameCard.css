@@ -1,14 +1,10 @@
 .steam-game-card{
     display:flex;
     flex-direction: row;
+
     
 }
-.greyedOutText{
-    
-  }  
-.steam-recent-games{
-    width:80%;
-}
+
 .steam-game-card > img{
     width: fit-content;
     height: fit-content;
@@ -25,6 +21,13 @@
     color: #d3d3d3;
     margin-left: 10px;
     margin-top: 10px;
+}
+
+.steam-game-left-side > a {
+    color: #d3d3d3;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-decoration: none;
 }
 
 .steam-game-right-side{

@@ -19,7 +19,9 @@ function RecentGameCard({ onClicked, text, game }: Props) {
       <div className="steam-game-card">
         <div className="steam-game-left-side">
           <img src={game.headerImage} />
-          <p>{game.name}</p>
+          <a href={"https://store.steampowered.com/app/" + game.appId}>
+            {game.name}
+          </a>
         </div>
         <div className="steam-game-right-side">
           <p className="greyedOutText">
