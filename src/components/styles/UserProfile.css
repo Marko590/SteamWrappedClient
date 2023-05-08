@@ -1,0 +1,41 @@
+.userProfile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .imageLarge {
+    width: 150px;
+    height: 150px;
+    border: solid 3px #999999;
+    margin-right: 2rem; /* add this to create space between the image and the nameText */
+  }
+  
+  .nameText {
+    font-size: 2.5rem;
+    color: #d8ded3;
+    flex-grow: 1; /* add this to make the paragraph expand to fill the remaining space */
+  }
+  .greyedOutText{
+    color:#97A175;
+  }
+  
+  .levelText{
+    font-size: 3rem;
+    flex: 0.5;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    color:#d8ded3;
+    
+  }
+  .circle {
+    border: 2px solid white;
+    margin-left: 10px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    width:fit-content;
+    height: fit-content;
+    text-align: center;
+  }

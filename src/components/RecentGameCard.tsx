@@ -2,8 +2,7 @@ import InsetBox from "./InsetBox";
 import "./styles/RecentGameCard.css";
 
 interface Props {
-  onClicked: () => void;
-  text: string;
+  onClicked?: () => void;
   game: RecentGame;
 }
 interface RecentGame {
@@ -13,7 +12,7 @@ interface RecentGame {
   headerImage: string;
   name: string;
 }
-function RecentGameCard({ onClicked, text, game }: Props) {
+function RecentGameCard({ onClicked, game }: Props) {
   return (
     <InsetBox>
       <div className="steam-game-card">

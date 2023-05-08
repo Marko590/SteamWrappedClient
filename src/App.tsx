@@ -8,6 +8,7 @@ import SteamInput from "./components/SteamInput";
 import axios from "axios";
 import React from "react";
 import RecentGameCard from "./components/RecentGameCard";
+import UserProfile from "./components/UserProfile";
 
 interface User {
   userName: string;
@@ -39,14 +40,6 @@ interface Friend {
 }
 function App() {
   const [windowVisible, setWindowVisibility] = useState(true);
-  const [user, setUser] = useState<User>();
-  useEffect(() => {
-    axios
-      .get("https://localhost:7209/SteamStats?steamId=76561198048469138")
-      .then((response) => {
-        setUser(response.data);
-      });
-  }, []);
 
   const [recentGames, setRecentGames] = useState<RecentGame[]>();
   useEffect(() => {
@@ -72,21 +65,18 @@ function App() {
     <div className="steam-background">
       {windowVisible && (
         <div className="main-div">
-          <Window showTaskbar={true} title="Steam">
-            <div className="userProfile">
-              <img className="imageLarge" src={user?.avatarUrl} />
-              <p className="nameText">{user?.userName}</p>
-              <div className="levelText">
-                Level <div className="circle"> 144</div>{" "}
-              </div>
-            </div>
-          </Window>
+          <UserProfile steamId={76561198048469138} />
+
           <div
             className="games-and-friends-container"
-            style={{ display: "flex", flexDirection: "row", width: "100%" }}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "100%",
+            }}
           >
             <div className="games-window">
-              <Window>
+              <Window showTaskbar={false}>
                 <div className="steam-recent-games">
                   <p className="nameText greyedOutText">Recent games</p>
                   <div className="recent-game-holder">

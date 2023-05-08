@@ -3,8 +3,8 @@ import "./styles/Window.css";
 import Taskbar from "./Taskbar";
 interface Props {
   children: ReactNode;
-  title: string;
-  showTaskbar: boolean;
+  title?: string;
+  showTaskbar?: boolean;
 }
 
 function Window({ title, children, showTaskbar }: Props) {

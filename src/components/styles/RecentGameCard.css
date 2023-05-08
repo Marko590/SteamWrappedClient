@@ -1,8 +1,7 @@
 .steam-game-card{
     display:flex;
     flex-direction: row;
-
-    
+    justify-content: space-between;
 }
 
 .steam-game-card > img{
@@ -14,7 +13,6 @@
     display:flex;
     flex-direction: row;
     align-items: flex-start;
-    flex-grow:1;
 }
 
 .steam-game-left-side > p {
