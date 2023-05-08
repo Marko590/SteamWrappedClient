@@ -13,8 +13,8 @@
   }
   
   .nameText {
-    font-size: 2.5rem;
-    color: #d8ded3;
+    font-size: 2rem;
+    color: #d3d3d3;
     flex-grow: 1; /* add this to make the paragraph expand to fill the remaining space */
   }
   .greyedOutText{
@@ -22,20 +22,23 @@
   }
   
   .levelText{
-    font-size: 3rem;
-    flex: 0.5;
-    margin-left: 50px;
+    font-size: 2rem;
     display: flex;
-    flex-direction: row;
-    color:#d8ded3;
-    
+    color: #d3d3d3;
   }
   .circle {
-    border: 2px solid white;
+    border: 2px solid #d3d3d3;;
     margin-left: 10px;
     border-radius: 50%;
     background: rgba(0, 0, 0, 0);
     width:fit-content;
     height: fit-content;
     text-align: center;
+  }
+
+  .profile-right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 50px;
   }
