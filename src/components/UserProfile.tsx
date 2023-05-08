@@ -31,8 +31,15 @@ function UserProfile({ steamId }: Props) {
       <div className="userProfile">
         <img className="imageLarge" src={user?.avatarUrl} />
         <p className="nameText">{user?.userName}</p>
-        <div className="levelText">
-          Level <div className="circle"> 144</div>{" "}
+        <div className="profile-right-side">
+          <div className="levelText">
+            Level <div className="circle"> {user?.playerLevel}</div>
+          </div>
+          <div className="levelText">
+            {user?.lastLoggedOf === null
+              ? "Online"
+              : "Last logged on: " + user?.lastLoggedOf.toDateString()}
+          </div>
         </div>
       </div>
     </Window>

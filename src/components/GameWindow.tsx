@@ -26,6 +26,7 @@ function GameWindow({ steamId }: Props) {
     <div className="games-window">
       <Window showTaskbar={false}>
         <p className="titleText greyedOutText">Recent games</p>
+
         {recentGames &&
           recentGames.map((game) => <RecentGameCard game={game} />)}
       </Window>

@@ -10,8 +10,7 @@
     border-top: solid 1px #292d23;
     border-bottom: solid 1px #899281;
     border-right: solid 1px #899281;
-    
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .steam-inset-box > .steam-inset-box{
@@ -29,8 +28,6 @@
 
 .steam-inset-box>p{
     font-size: 14px;
-    
     color: #d8ded3;
     font-family: Trebuchet MS;
-    
   }

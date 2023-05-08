@@ -1,6 +1,6 @@
 .steam-window {
     background-color: #4C5844;
-    
+    height: 100%;
     display: flex;
     border-style: solid;
     border-width: 0.5px;

@@ -23,12 +23,8 @@
   
   .levelText{
     font-size: 2rem;
-    flex: 0.5;
-    margin-left: 50px;
     display: flex;
-    flex-direction: row;
     color: #d3d3d3;
-    
   }
   .circle {
     border: 2px solid #d3d3d3;;
@@ -38,4 +34,11 @@
     width:fit-content;
     height: fit-content;
     text-align: center;
+  }
+
+  .profile-right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 50px;
   }
