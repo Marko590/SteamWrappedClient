@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Window from "./components/Window";
-import InsetBox from "./components/InsetBox";
-import Button from "./components/Button";
-import CheckBox from "./components/CheckBox";
-import SteamInput from "./components/SteamInput";
 import axios from "axios";
-import React from "react";
 import RecentGameCard from "./components/RecentGameCard";
 import UserProfile from "./components/UserProfile";
 import FriendsCard from "./components/FriendsCard";
@@ -46,7 +41,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        "https://localhost:7209/SteamStats/friends?steamId=76561198048469138&numberOfFriends=10"
+        "https://localhost:7209/SteamStats/friends?steamId=76561198048469138&numberOfFriends=8"
       )
       .then((response) => {
         setFriends(response.data);
@@ -58,15 +53,7 @@ function App() {
       {windowVisible && (
         <div className="main-div">
           <UserProfile steamId={76561198048469138} />
-
-          <div
-            className="games-and-friends-container"
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "100%",
-            }}
-          >
+          <div className="friends-and-games">
             <div className="games-window">
               <Window showTaskbar={false}>
                 <div>

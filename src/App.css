@@ -55,12 +55,13 @@ select {
 .main-div{
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
 }
 
 .friends-and-games{
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .friends-window{
