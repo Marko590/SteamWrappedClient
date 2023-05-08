@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Window from "./components/Window";
+import InsetBox from "./components/InsetBox";
+import Button from "./components/Button";
+import CheckBox from "./components/CheckBox";
+import SteamInput from "./components/SteamInput";
 import axios from "axios";
+import React from "react";
 import RecentGameCard from "./components/RecentGameCard";
 import UserProfile from "./components/UserProfile";
 import FriendsCard from "./components/FriendsCard";
+import GameWindow from "./components/GameWindow";
+import FriendWindow from "./components/FriendWindow";
 
 interface RecentGame {
   appId: number;
@@ -28,20 +35,11 @@ interface Friend {
 function App() {
   const [windowVisible, setWindowVisibility] = useState(true);
 
-  const [recentGames, setRecentGames] = useState<RecentGame[]>();
-  useEffect(() => {
-    axios
-      .get("https://localhost:7209/SteamStats/recent?steamId=76561198048469138")
-      .then((response) => {
-        setRecentGames(response.data);
-      });
-  }, []);
-
   const [friends, setFriends] = useState<Friend[]>();
   useEffect(() => {
     axios
       .get(
-        "https://localhost:7209/SteamStats/friends?steamId=76561198048469138&numberOfFriends=8"
+        "https://localhost:7209/SteamStats/friends?steamId=76561198048469138&numberOfFriends=10"
       )
       .then((response) => {
         setFriends(response.data);
@@ -54,26 +52,8 @@ function App() {
         <div className="main-div">
           <UserProfile steamId={76561198048469138} />
           <div className="friends-and-games">
-            <div className="games-window">
-              <Window showTaskbar={false}>
-                <div>
-                  <p className="nameText greyedOutText">Recent games</p>
-                  <div className="recent-game-holder">
-                    {recentGames &&
-                      recentGames.map((game) => <RecentGameCard game={game} />)}
-                  </div>
-                </div>
-              </Window>
-            </div>
-            <div className="friends-window">
-              <Window>
-                <div>
-                  <p className="nameText greyedOutText">Friends</p>
-                  {friends &&
-                    friends.map((friend) => <FriendsCard friend={friend} />)}
-                </div>
-              </Window>
-            </div>
+            <GameWindow steamId="76561198048469138" />
+            <FriendWindow steamId="76561198048469138" numberOfFriends={7} />
           </div>
         </div>
       )}

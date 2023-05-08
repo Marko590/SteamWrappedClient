@@ -1,0 +1,9 @@
+.games-window{
+    flex:2.25;
+  }
+  .greyedOutText{
+    color:#97A175;
+  }
+  .titleText{
+    font-size: 2rem;
+}
