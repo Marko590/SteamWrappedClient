@@ -1,9 +1,11 @@
+
 .steam-background {
     background-color: #3e4637;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1200px;
+    height: 100vh;
+    overflow:auto
   }
   code{
     background: #3e4637;

@@ -11,7 +11,7 @@ interface RecentGame {
   name: string;
 }
 interface Props {
-  steamId: string;
+  steamId?: string;
 }
 function GameWindow({ steamId }: Props) {
   const [recentGames, setRecentGames] = useState<RecentGame[]>();

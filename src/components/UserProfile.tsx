@@ -4,7 +4,7 @@ import axios from "axios";
 import "./styles/UserProfile.css";
 
 interface Props {
-  steamId: string;
+  steamId?: string;
 }
 
 interface User {

@@ -5,7 +5,7 @@ import FriendsCard from "./FriendsCard";
 import "./styles/FriendWindow.css";
 
 interface Props {
-  steamId: string;
+  steamId?: string;
   numberOfFriends: number;
 }
 
