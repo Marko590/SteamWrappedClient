@@ -1,0 +1,33 @@
+/* HoverDropdown.css */
+.my-dropdown-menu {
+    color:#C4AC49;
+    background-color: #4C5844;
+    border: none;
+    border-radius: 0;
+  }
+
+  .my-dropdown-menu-background {
+    color:#C4AC49;
+    background-color: #4C5844;
+    border: none;
+    padding:0;     
+  }
+  .my-dropdown-menu:hover{
+    color:#E3E420;
+    background-color: #5A6B50;
+    text-decoration: underline;
+  }
+  .my-dropdown-item:hover{
+    color:#E3E420;
+    background-color: #5A6B50;
+    text-decoration: underline;
+  }
+  
+  .my-dropdown-item {
+    border: none;
+             
+    color:#C4AC49;
+    background-color: #4C5844;
+    margin: 0;
+  }
+  
