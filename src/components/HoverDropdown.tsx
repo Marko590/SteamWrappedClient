@@ -6,25 +6,28 @@ import {
   DropdownItem,
 } from "reactstrap";
 import "./styles/HoverDropdown.css";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   options: Option[];
+  containsLinks: boolean;
 }
 interface Option {
   text: string;
   value: string;
-  link: string;
+  link?: string;
 }
-function HoverDropdown({ options }: Props) {
+function HoverDropdown({ options, containsLinks }: Props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+  const navigate = useNavigate();
   const toggle = () => setDropdownOpen((prevState) => !prevState);
-
-  const handleItemClick = (event: any) => {
-    // Add your code here to handle the click event
-    console.log("Item clicked:", event.target.textContent);
-  };
-
+  function setOnClick(option: Option) {
+    if (containsLinks) {
+      return navigate(option.link ? option.link.toString() : "error");
+    } else {
+      return () => {};
+    }
+  }
   return (
     <Dropdown
       onMouseOver={() => setDropdownOpen(true)}
@@ -37,7 +40,12 @@ function HoverDropdown({ options }: Props) {
       </DropdownToggle>
       <DropdownMenu className="my-dropdown-menu-background">
         {options.map((option) => (
-          <DropdownItem onClick={handleItemClick} className="my-dropdown-item">
+          <DropdownItem
+            onClick={() => {
+              setOnClick(option);
+            }}
+            className="my-dropdown-item"
+          >
             {option.text}
           </DropdownItem>
         ))}

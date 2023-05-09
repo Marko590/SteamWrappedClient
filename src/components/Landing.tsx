@@ -20,12 +20,12 @@ export default function Landing() {
   interface Option {
     text: string;
     value: string;
-    link: string;
+    link?: string;
   }
   var options: Option[] = [
-    { text: "1", value: "1", link: "asdf" },
-    { text: "2", value: "2", link: "asdf" },
-    { text: "3", value: "3", link: "asdf" },
+    { text: "1", value: "1", link: "1" },
+    { text: "2", value: "2", link: "2" },
+    { text: "3", value: "3" },
   ];
   return (
     <div className="steam-background" style={{ justifyContent: "center" }}>
@@ -53,7 +53,7 @@ export default function Landing() {
                   navigate("/user/" + steamId);
                 }}
               />
-              <HoverDropdown options={options} />
+              <HoverDropdown options={options} containsLinks={false} />
               <h5 style={{ textAlign: "center" }}>
                 Copy your SteamID and check information about your profile. Your
                 profile privacy settings must be set to public. See how here.
