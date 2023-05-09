@@ -1,10 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Window from "./Window";
 import "./styles/Landing.css";
 import Button from "./Button";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import SteamInput from "./SteamInput";
-import ReactDropdown from "react-dropdown";
 import HoverDropdown from "./HoverDropdown";
 
 export default function Landing() {
@@ -14,9 +13,6 @@ export default function Landing() {
     setSteamId(e.target.value);
   };
 
-  interface Props {
-    options: Option[];
-  }
   interface Option {
     text: string;
     value: string;
@@ -30,9 +26,7 @@ export default function Landing() {
   return (
     <div className="steam-background" style={{ justifyContent: "center" }}>
       <div className="main-div">
-        <div style={{ alignSelf: "center", width: "100%", margin: 50 }}>
-          <Window showTaskbar={true} title="Lookup a steamId"></Window>
-        </div>
+        <div style={{ alignSelf: "center", width: "100%", margin: 50 }}></div>
         <div style={{ width: "90%", alignSelf: "center" }}>
           <Window>
             <div
