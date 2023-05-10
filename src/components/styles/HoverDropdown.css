@@ -4,9 +4,12 @@
     background-color: #4C5844;
     border: none;
     border-radius: 0;
+    font-size:20px;
+    height: 100%;
   }
 
   .my-dropdown-menu-background {
+    min-width:100%;
     color:#C4AC49;
     background-color: #4C5844;
     border: none;
@@ -24,6 +27,7 @@
   }
   
   .my-dropdown-item {
+    font-size:20px;
     border: none;         
     color:#C4AC49;
     background-color: #4C5844;

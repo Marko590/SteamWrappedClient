@@ -5,13 +5,24 @@ interface Props {
   children: ReactNode;
   title?: string;
   showTaskbar?: boolean;
+  contentPadding?: boolean;
 }
-
-function Window({ title, children, showTaskbar }: Props) {
+Window.defaultProps = {
+  contentPadding: true,
+};
+function Window({ title, children, showTaskbar, contentPadding }: Props) {
   return (
     <div className="steam-window">
       {showTaskbar && <Taskbar title={title} />}
-      <div className="steam-window-content">{children}</div>
+      <div
+        className={
+          contentPadding
+            ? "steam-window-content"
+            : "steam-window-content-no-padding"
+        }
+      >
+        {children}
+      </div>
     </div>
   );
 }

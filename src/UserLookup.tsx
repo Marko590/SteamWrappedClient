@@ -3,6 +3,7 @@ import UserProfile from "./components/UserProfile";
 import GameWindow from "./components/GameWindow";
 import FriendWindow from "./components/FriendWindow";
 import { useParams } from "react-router-dom";
+import NavBar from "./components/NavBar";
 function UserLookup() {
   const { steamId } = useParams();
   return (

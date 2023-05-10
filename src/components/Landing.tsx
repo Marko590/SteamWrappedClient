@@ -4,7 +4,8 @@ import "./styles/Landing.css";
 import Button from "./Button";
 import { useState } from "react";
 import SteamInput from "./SteamInput";
-import HoverDropdown from "./HoverDropdown";
+
+import NavBar from "./NavBar";
 
 export default function Landing() {
   const navigate = useNavigate();
@@ -13,19 +14,10 @@ export default function Landing() {
     setSteamId(e.target.value);
   };
 
-  interface Option {
-    text: string;
-    value: string;
-    link?: string;
-  }
-  var options: Option[] = [
-    { text: "1", value: "1", link: "1" },
-    { text: "2", value: "2", link: "2" },
-    { text: "3", value: "3" },
-  ];
   return (
     <div className="steam-background" style={{ justifyContent: "center" }}>
       <div className="main-div">
+        <NavBar />
         <div style={{ alignSelf: "center", width: "100%", margin: 50 }}></div>
         <div style={{ width: "90%", alignSelf: "center" }}>
           <Window>
@@ -47,7 +39,7 @@ export default function Landing() {
                   navigate("/user/" + steamId);
                 }}
               />
-              <HoverDropdown options={options} containsLinks={false} />
+
               <h5 style={{ textAlign: "center" }}>
                 Copy your SteamID and check information about your profile. Your
                 profile privacy settings must be set to public. See how here.

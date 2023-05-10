@@ -10,7 +10,7 @@
     border-left:  solid 1px #899281;
     border-right: solid 1px #292d23;
     margin: 10px;
-    padding: 10px;
+    
   }
 
   .steam-window-content h1 {
@@ -45,7 +45,12 @@
     font-family: Trebuchet MS;
   }
   .steam-window-content{
-    padding:20px;
+    padding:30px;
+    display:flex;
+    flex-direction: column;
+  }
+
+  .steam-window-content-no-padding{
     display:flex;
     flex-direction: column;
   }

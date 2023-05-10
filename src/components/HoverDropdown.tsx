@@ -34,6 +34,7 @@ function HoverDropdown({ options, containsLinks }: Props) {
       onMouseLeave={() => setDropdownOpen(false)}
       isOpen={dropdownOpen}
       toggle={toggle}
+      style={{ height: "100%" }}
     >
       <DropdownToggle className="my-dropdown-menu" caret>
         Dropdown
