@@ -1,5 +1,6 @@
 .friends-window{
     flex:1;
+    margin-bottom: 20px;
   }
   .greyedOutText{
     color:#97A175;

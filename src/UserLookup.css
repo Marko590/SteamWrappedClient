@@ -68,9 +68,8 @@ select {
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .friends-and-games {
-    
     flex-direction: column;
   }
 }

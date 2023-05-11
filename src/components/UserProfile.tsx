@@ -29,8 +29,10 @@ function UserProfile({ steamId }: Props) {
   return (
     <Window showTaskbar={true} title="Steam">
       <div className="userProfile">
-        <img className="imageLarge" src={user?.avatarUrl} />
-        <p className="nameText">{user?.userName}</p>
+        <div className="profile-left-side">
+          <img className="imageLarge" src={user?.avatarUrl} />
+          <p className="nameText">{user?.userName}</p>
+        </div>
         <div className="profile-right-side">
           <div className="levelText">
             Level <div className="circle"> {user?.playerLevel}</div>

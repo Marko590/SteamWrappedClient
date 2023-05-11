@@ -6,14 +6,14 @@
   }
   
   .imageLarge {
-    max-width: 150px;
-    max-height: 150px;
+    width:20%;
+    height:auto;
     border: solid 3px #999999;
     margin-right: 2rem; /* add this to create space between the image and the nameText */
   }
   
   .nameText {
-    font-size: 2rem;
+    font-size: 3vw;
     color: #d3d3d3;
     flex-grow: 1; /* add this to make the paragraph expand to fill the remaining space */
   }
@@ -22,7 +22,7 @@
   }
   
   .levelText{
-    font-size: 2rem;
+    font-size: 24px;
     display: flex;
     color: #d3d3d3;
   }
@@ -35,10 +35,49 @@
     height: fit-content;
     text-align: center;
   }
-
+  .profile-left-side{
+    display:flex;
+    
+  }
   .profile-right-side{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-right: 50px;
+  }
+  
+  @media screen and (max-width: 1000px) {
+
+    
+    .userProfile{
+      flex-direction: column;
+    }
+    .imageLarge{
+      width:150px;
+      margin:0;
+    } 
+    .profile-left-side{
+      flex-direction: column;
+      margin-bottom: 35px;
+      align-items: center;
+    }
+    .nameText{
+      margin-top: 20px;
+      font-size: 24px;
+      text-align: center;
+    }
+    .profile-right-side{
+      flex-direction: row;
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (min-width: 1500px) {
+
+    .nameText{
+      font-size: 42px;
+    }
+    .userProfile{
+      background-color: aqua;
+    }
   }
