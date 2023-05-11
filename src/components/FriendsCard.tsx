@@ -1,3 +1,4 @@
+import InsetBox from "./InsetBox";
 import "./styles/FriendsCard.css";
 
 interface Friend {
@@ -69,15 +70,21 @@ function FriendsCard({ friend }: Props) {
   var friendStatus: FriendStatus = getFriendStatus(friend);
   return (
     <div className="card-container">
-      <img
-        className="friend-profile-pic"
-        style={{ borderColor: friendStatus.color }}
-        src={friend.avatarUrl}
-      />
-      <div className="friend-status">
-        <p style={{ color: friendStatus.color }}>{friend.userName}</p>
-        <p style={{ color: friendStatus.color }}>{friendStatus.stringStatus}</p>
-      </div>
+      <InsetBox>
+        <div className="card-content">
+          <img
+            className="friend-profile-pic"
+            style={{ borderColor: friendStatus.color }}
+            src={friend.avatarUrl}
+          />
+          <div className="friend-status">
+            <p style={{ color: friendStatus.color }}>{friend.userName}</p>
+            <p style={{ color: friendStatus.color }}>
+              {friendStatus.stringStatus}
+            </p>
+          </div>
+        </div>
+      </InsetBox>
     </div>
   );
 }
