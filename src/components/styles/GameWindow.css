@@ -7,4 +7,14 @@
   }
   .titleText{
     font-size: 2rem;
+    margin: 0;
+}
+.game-info{
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .titleText{
+    text-align: center;
+  }
 }
