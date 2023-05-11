@@ -57,7 +57,7 @@ select {
 .main-div{
   display: flex;
   flex-direction: column;
-  width: 90%;
+  min-width: 85%;
   
 }
 
