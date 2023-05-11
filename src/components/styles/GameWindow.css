@@ -1,6 +1,7 @@
 .games-window{
   margin-top: 10px;
     flex:2.25;
+    margin-bottom: 20px;
   }
   .greyedOutText{
     color:#97A175;

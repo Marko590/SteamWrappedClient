@@ -22,7 +22,7 @@
   }
   
   .levelText{
-    font-size: 24px;
+    font-size: 2.75vw;
     display: flex;
     color: #d3d3d3;
   }
@@ -43,12 +43,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 50px;
+    margin-right: 15px;
   }
   
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 768px) {
 
-    
     .userProfile{
       flex-direction: column;
     }
@@ -70,6 +69,9 @@
       flex-direction: row;
       margin-right: 0;
     }
+    .levelText{
+      font-size: 28px;
+    }
   }
 
   @media screen and (min-width: 1500px) {
@@ -80,4 +82,5 @@
     .userProfile{
       background-color: aqua;
     }
+    
   }

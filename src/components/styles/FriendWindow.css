@@ -1,7 +1,8 @@
 .friends-window{
-    flex:1;
-    margin-bottom: 20px;
-  }
+  margin-top: 10px;
+  flex:1;
+  margin-bottom: 20px;
+}
   .greyedOutText{
     color:#97A175;
   }
@@ -9,3 +10,4 @@
 .titleText{
     font-size: 2rem;
 }
+
