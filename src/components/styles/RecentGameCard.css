@@ -10,6 +10,8 @@
     height: fit-content;
 }
 
+
+
 .steam-game-left-side{
     display:flex;
     flex-direction: row;
@@ -43,3 +45,19 @@
     margin-bottom: 5px;
     color:#97A175;
 }
+
+@media screen and (max-width: 768px) {
+    .steam-game-card {
+        align-items: center;
+        flex-direction: column;
+    }
+    .steam-game-left-side{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .steam-game-right-side{
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+  }

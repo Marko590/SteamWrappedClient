@@ -1,6 +1,6 @@
 import InsetBox from "./InsetBox";
 import "./styles/RecentGameCard.css";
-
+import { useState, useEffect } from "react";
 interface Props {
   onClicked?: () => void;
   game: RecentGame;
@@ -12,6 +12,7 @@ interface RecentGame {
   headerImage: string;
   name: string;
 }
+
 function RecentGameCard({ onClicked, game }: Props) {
   return (
     <InsetBox>
@@ -25,9 +26,8 @@ function RecentGameCard({ onClicked, game }: Props) {
         <div className="steam-game-right-side">
           <p className="greyedOutText">
             {(game.allTime / 60).toFixed(1)} hrs on record
-            <br />
-            {(game.twoWeeks / 60).toFixed(1)} hrs on record past two weeks
           </p>
+          <p>{(game.twoWeeks / 60).toFixed(1)} hrs on record past two weeks</p>
         </div>
       </div>
     </InsetBox>
