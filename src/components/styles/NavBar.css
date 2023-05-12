@@ -20,19 +20,6 @@
   }
 
 
-
-@media screen and (min-width: 601px) {
-    .navbar-item p {
-      font-size: 25px;
-    }
-  }
-  
-
-  @media screen and (max-width: 600px) {
-    .navbar-item p {
-      font-size: 15px;
-    }
-  }
   .navbar-item:hover >  p {
     color:#E3E420;
     margin:0;
@@ -43,3 +30,17 @@
     background-color: #5A6B50;
     
   }
+  
+@media screen and (min-width: 769px) {
+    .navbar-item p {
+      font-size: 25px;
+    }
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .navbar-item p {
+      font-size: 15px;
+    }
+  }
+  

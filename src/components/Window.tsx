@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import "./styles/Window.css";
 import Taskbar from "./Taskbar";
+import NavBar from "./NavBar";
 interface Props {
   children: ReactNode;
   title?: string;

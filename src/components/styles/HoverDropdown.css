@@ -1,36 +1,43 @@
 /* HoverDropdown.css */
 .my-dropdown-menu {
-    color:#C4AC49;
-    background-color: #4C5844;
-    border: none;
-    border-radius: 0;
-    font-size:20px;
-    height: 100%;
+    color:#C4AC49 !important;
+    background-color: #4C5844 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-size:25px !important;
+    height: 100% !important; 
   }
 
   .my-dropdown-menu-background {
-    min-width:100%;
-    color:#C4AC49;
-    background-color: #4C5844;
-    border: none;
-    padding:0;     
+    min-width:100% !important;
+    color:#C4AC49 !important;
+    background-color: #4C5844 !important;
+    border: none !important;
+    padding:0 !important;     
   }
   .my-dropdown-menu:hover{
-    color:#E3E420;
-    background-color: #5A6B50;
-    text-decoration: underline;
+    color:#E3E420 !important;
+    background-color: #5A6B50 !important;
+    text-decoration: underline !important;
   }
   .my-dropdown-item:hover{
-    color:#E3E420;
-    background-color: #5A6B50;
+    color:#E3E420 !important;
+    background-color: #5A6B50 !important;
     text-decoration: underline;
   }
   
   .my-dropdown-item {
-    font-size:20px;
-    border: none;         
-    color:#C4AC49;
-    background-color: #4C5844;
-    margin: 0;
+    font-size:20px !important;
+    border: none !important;         
+    color:#C4AC49 !important;
+    background-color: #4C5844 !important;
+    margin: 0 !important;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .my-dropdown-menu {
+      font-size:15px !important;
+      
+    }
   }
   
