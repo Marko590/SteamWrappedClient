@@ -16,7 +16,7 @@ function NavBar() {
   ];
   const navigate = useNavigate();
   return (
-    <Window contentPadding={false} showTaskbar={false}>
+    <Window contentPadding={false} showTaskbar={false} isNavBar={true}>
       <div
         style={{
           display: "flex",

@@ -6,13 +6,20 @@ interface Props {
   title?: string;
   showTaskbar?: boolean;
   contentPadding?: boolean;
+  isNavBar?: boolean;
 }
 Window.defaultProps = {
   contentPadding: true,
 };
-function Window({ title, children, showTaskbar, contentPadding }: Props) {
+function Window({
+  title,
+  children,
+  showTaskbar,
+  contentPadding,
+  isNavBar,
+}: Props) {
   return (
-    <div className="steam-window">
+    <div className={isNavBar ? "steam-window-navbar" : "steam-window"}>
       {showTaskbar && <Taskbar title={title} />}
       <div
         className={
